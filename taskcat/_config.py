@@ -69,6 +69,20 @@ class Config:
         uid: uuid.UUID = None,
     ) -> "Config":
         uid = uid if uid else uuid.uuid4()
+
+        sources = []
+        # cli arguments
+        if args:
+            sources.append({"source": "CliArgument", "config": args})
+
+        # environment variable
+        sources.append(
+            {
+                "source": "EnvoronmentVariable",
+                "config": cls._dict_from_env_vars(env_vars),
+            }
+        )
+
         project_source = cls._get_project_source(
             cls, project_config_path, project_root, template_file
         )
@@ -79,12 +93,13 @@ class Config:
             global_config_path,
             "global",
         )
-        sources = [
+
+        sources.append(
             {
                 "source": str(global_config_path),
                 "config": cls._dict_from_file(global_config_path),
             }
-        ]
+        )
 
         # project config file
         if project_source:
@@ -110,17 +125,6 @@ class Config:
             overrides["project"]["parameters"] = override_params
             sources.append({"source": str(overrides_path), "config": overrides})
 
-        # environment variables
-        sources.append(
-            {
-                "source": "EnvoronmentVariable",
-                "config": cls._dict_from_env_vars(env_vars),
-            }
-        )
-
-        # cli arguments
-        if args:
-            sources.append({"source": "CliArgument", "config": args})
         return cls(sources=sources, uid=uid, project_root=project_root)
 
     # pylint: disable=protected-access

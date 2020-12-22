@@ -559,7 +559,7 @@ class BaseConfig(JsonSchemaMixin, allow_additional_props=False):  # type: ignore
     def _merge(source, dest):
         for section_key, section_value in source.items():
             if section_key in PROPAGATE_KEYS + PROPOGATE_ITEMS:
-                if section_key not in dest:
+                if not dest.get(section_key):
                     dest[section_key] = section_value
                     continue
                 if section_key in PROPAGATE_KEYS:

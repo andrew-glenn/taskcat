@@ -1,0 +1,9 @@
+general:
+  auth:
+    default: example-profile
+    us-east-1: another-example-profile
+  s3_bucket: "set-in-global"
+  s3_regional_buckets: False
+  parameters:
+    GlobalVar: set_in_global
+    OverridenVar: set_in_global

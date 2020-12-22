@@ -130,6 +130,33 @@ class TestNewConfig(unittest.TestCase):
         self.assertEqual(expected, config.config.to_dict())
         self.assertEqual(expected_source, config.config._source)
 
+    def test_config_override_propagation(self):
+        base_path = "./" if os.getcwd().endswith("/tests") else "./tests/"
+        base_path = Path(base_path + "data/config_inheritance").resolve()
+
+        cliconfig = {'project': {'build_submodules': False}}
+        config = Config.create(
+            args=cliconfig,
+            global_config_path=base_path / ".taskcat_global_propagation.yml",
+            project_config_path=base_path / "./.taskcat.yml",
+            overrides_path=base_path / "./.taskcat_overrides.yml",
+            env_vars={
+                "TASKCAT_PROJECT_PACKAGE_LAMBDA": "True",
+                "TASKCAT_PROJECT_S3_REGIONAL_BUCKETS": "True"},
+        )
+
+        with self.subTest():
+            self.assertEqual(config.config.project.s3_regional_buckets, True)
+        with self.subTest():
+            self.assertEqual(config.config.project.build_submodules, False)
+        with self.subTest():
+            self.assertEqual(config.config.project.package_lambda, False)
+
+        for test_name, test_def in config.config.tests.items():
+            with self.subTest():
+                self.assertEqual(test_def.s3_regional_buckets, True)
+                self.assertEqual(test_def.auth['us-east-1'], 'foobar')
+
     def test_legacy_config(self):
 
         base_path = "./" if os.getcwd().endswith("/tests") else "./tests/"
