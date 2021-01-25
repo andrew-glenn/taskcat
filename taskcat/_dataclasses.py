@@ -616,3 +616,53 @@ class BaseConfig(JsonSchemaMixin, allow_additional_props=False):  # type: ignore
         config._source = merged_source
         config._propogate_source()  # pylint: disable=protected-access
         return config
+
+
+import subprocess
+
+class HookWrapper:
+    PRE = 0
+    POST = 999
+    
+    def __init__(self, hook_command: str, hook_type_order: int, project_root: str, timeout = None):
+        self._hook_command = hook_command.split(' ')
+        self._hook_type_order = hook_type_order
+        self._hook_cwd = project_root
+        self._hook_timeout = timeout
+        self._proc = None
+
+    @property
+    def stdout(self):
+        if self._proc:
+            return self._proc.stdout
+
+    @property
+    def succeeded(self):
+        return (self.exit_code == 0)
+
+    @property
+    def stderr(self):
+        if self._proc:
+            return self._proc.stderr
+        return None
+
+    @property
+    def exit_code(self):
+        if self._proc:
+            return self._proc.returncode
+        return None
+
+    @property
+    def run(self):
+        self._proc = self._run_hook()
+        return
+
+    def _run_hook(self):
+        proc = subprocess.run(
+            args=self._hook_command,
+            cwd=self._hook_cwd,
+            timeout=self._hook_timeout,
+            text=True,
+            capture_output=True
+        )
+        return proc
