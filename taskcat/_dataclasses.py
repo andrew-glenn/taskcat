@@ -2,6 +2,7 @@ import json
 import logging
 import random
 import string
+import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, NewType, Optional, Union
@@ -430,7 +431,9 @@ class GeneralConfig(JsonSchemaMixin, allow_additional_props=False):  # type: ign
         default=None, metadata=METADATA["s3_regional_buckets"]
     )
     regions: Optional[List[Region]] = field(default=None, metadata=METADATA["regions"])
-
+    enable_hooks: Optional[bool] = field(
+        default=True, metadata=METADATA['enable_hooks']
+    )
 
 @dataclass
 class TestConfig(JsonSchemaMixin, allow_additional_props=False):  # type: ignore
@@ -441,6 +444,7 @@ class TestConfig(JsonSchemaMixin, allow_additional_props=False):  # type: ignore
         default_factory=dict, metadata=METADATA["parameters"]
     )
     regions: Optional[List[Region]] = field(default=None, metadata=METADATA["regions"])
+    hooks: Optional[List[PrePostHook]] = field(default=None, metadata=METADATA["hooks"])
     tags: Optional[Dict[TagKey, TagValue]] = field(
         default=None, metadata=METADATA["tags"]
     )
@@ -617,16 +621,17 @@ class BaseConfig(JsonSchemaMixin, allow_additional_props=False):  # type: ignore
         config._propogate_source()  # pylint: disable=protected-access
         return config
 
-
-import subprocess
-
 class HookWrapper:
     PRE = 0
     POST = 999
-    
-    def __init__(self, hook_command: str, hook_type_order: int, project_root: str, timeout = None):
+
+    def __init__(self,
+            hook_command: str,
+            hook_order: int,
+            project_root: Path,
+            timeout = None):
         self._hook_command = hook_command.split(' ')
-        self._hook_type_order = hook_type_order
+        self._hook_order = self.TYPE + hook_order
         self._hook_cwd = project_root
         self._hook_timeout = timeout
         self._proc = None
@@ -657,6 +662,10 @@ class HookWrapper:
         self._proc = self._run_hook()
         return
 
+    @property
+    def order(self):
+        return self._hook_order
+
     def _run_hook(self):
         proc = subprocess.run(
             args=self._hook_command,
@@ -666,3 +675,14 @@ class HookWrapper:
             capture_output=True
         )
         return proc
+
+    @classmethod
+    def from_schema(cls):
+        return 
+
+class PreHook(HookWrapper):
+    TYPE = HookWrapper.PRE
+
+
+class PostHook(HookWrapper):
+    TYPE = HookWrapper.POST
