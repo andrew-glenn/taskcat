@@ -14,7 +14,7 @@
     
     
       
-        <title>Exceptions - taskcat</title>
+        <title>General Usage - taskcat</title>
       
     
     
@@ -40,7 +40,7 @@
     
     
     
-      <link rel="stylesheet" href="../../docs/custom.css">
+      <link rel="stylesheet" href="../custom.css">
     
     
       
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-taskcatexceptions" class="md-skip">
+        <a href="#usage" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exceptions
+              General Usage
             
           </span>
         </div>
@@ -216,7 +216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/INSTALLATION.html" class="md-nav__link">
+      <a href="../INSTALLATION.html" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -229,12 +229,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Usage
@@ -250,11 +252,115 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../docs/usage/GENERAL_USAGE.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          General Usage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="GENERAL_USAGE.html" class="md-nav__link md-nav__link--active">
         General Usage
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-files" class="md-nav__link">
+    Config files
+  </a>
+  
+    <nav class="md-nav" aria-label="Config files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-config" class="md-nav__link">
+    Global config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-config" class="md-nav__link">
+    Project config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precedence" class="md-nav__link">
+    Precedence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-interface" class="md-nav__link">
+    CLI interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    Configuration files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -264,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/usage/PARAMETER_OVERRIDES.html" class="md-nav__link">
+      <a href="PARAMETER_OVERRIDES.html" class="md-nav__link">
         Parameter Overrides
       </a>
     </li>
@@ -276,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/usage/PSUEDO_PARAMETERS.html" class="md-nav__link">
+      <a href="PSUEDO_PARAMETERS.html" class="md-nav__link">
         Psuedo Parameters
       </a>
     </li>
@@ -297,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/schema/taskcat_schema.html" class="md-nav__link">
+      <a href="../schema/taskcat_schema.html" class="md-nav__link">
         Configuration Schema
       </a>
     </li>
@@ -333,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/administrative/CODE_OF_CONDUCT.html" class="md-nav__link">
+      <a href="../administrative/CODE_OF_CONDUCT.html" class="md-nav__link">
         Code of Conduct
       </a>
     </li>
@@ -345,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/administrative/CONTRIBUTING.html" class="md-nav__link">
+      <a href="../administrative/CONTRIBUTING.html" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -364,14 +470,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
         Reference
@@ -389,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../taskcat_plugin_testhook.html" class="md-nav__link">
+      <a href="../../reference/taskcat_plugin_testhook.html" class="md-nav__link">
         Taskcat Plugin Testhook
       </a>
     </li>
@@ -399,14 +503,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
       
       <label class="md-nav__link" for="__nav_6_2">
         Taskcat
@@ -422,146 +524,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Exceptions
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="exceptions.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../reference/taskcat/exceptions.html" class="md-nav__link">
         Exceptions
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#classes" class="md-nav__link">
-    Classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#invalidactionerror" class="md-nav__link">
-    InvalidActionError
-  </a>
-  
-    <nav class="md-nav" aria-label="InvalidActionError">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ancestors-in-mro" class="md-nav__link">
-    Ancestors (in MRO)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-variables" class="md-nav__link">
-    Class variables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with_traceback" class="md-nav__link">
-    with_traceback
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#taskcatexception" class="md-nav__link">
-    TaskCatException
-  </a>
-  
-    <nav class="md-nav" aria-label="TaskCatException">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ancestors-in-mro_1" class="md-nav__link">
-    Ancestors (in MRO)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#descendants" class="md-nav__link">
-    Descendants
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-variables_1" class="md-nav__link">
-    Class variables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methods_1" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with_traceback_1" class="md-nav__link">
-    with_traceback
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -571,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../../reference/taskcat/index.html" class="md-nav__link">
         Index
       </a>
     </li>
@@ -583,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="regions_to_partitions.html" class="md-nav__link">
+      <a href="../../reference/taskcat/regions_to_partitions.html" class="md-nav__link">
         Regions To Partitions
       </a>
     </li>
@@ -616,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cfn/index.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cfn/index.html" class="md-nav__link">
         Index
       </a>
     </li>
@@ -628,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cfn/stack.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cfn/stack.html" class="md-nav__link">
         Stack
       </a>
     </li>
@@ -640,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cfn/stack_url_helper.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cfn/stack_url_helper.html" class="md-nav__link">
         Stack Url Helper
       </a>
     </li>
@@ -652,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cfn/template.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cfn/template.html" class="md-nav__link">
         Template
       </a>
     </li>
@@ -664,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cfn/threaded.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cfn/threaded.html" class="md-nav__link">
         Threaded
       </a>
     </li>
@@ -703,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/delete.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/delete.html" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -715,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/deploy.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/deploy.html" class="md-nav__link">
         Deploy
       </a>
     </li>
@@ -727,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/generate_iam_policy.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/generate_iam_policy.html" class="md-nav__link">
         Generate Iam Policy
       </a>
     </li>
@@ -739,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/index.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/index.html" class="md-nav__link">
         Index
       </a>
     </li>
@@ -751,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/lint.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/lint.html" class="md-nav__link">
         Lint
       </a>
     </li>
@@ -763,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/list.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/list.html" class="md-nav__link">
         List
       </a>
     </li>
@@ -775,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/package.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/package.html" class="md-nav__link">
         Package
       </a>
     </li>
@@ -787,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/test.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/test.html" class="md-nav__link">
         Test
       </a>
     </li>
@@ -799,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/update_ami.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/update_ami.html" class="md-nav__link">
         Update Ami
       </a>
     </li>
@@ -811,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="_cli_modules/upload.html" class="md-nav__link">
+      <a href="../../reference/taskcat/_cli_modules/upload.html" class="md-nav__link">
         Upload
       </a>
     </li>
@@ -850,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="testing/base_test.html" class="md-nav__link">
+      <a href="../../reference/taskcat/testing/base_test.html" class="md-nav__link">
         Base Test
       </a>
     </li>
@@ -862,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="testing/index.html" class="md-nav__link">
+      <a href="../../reference/taskcat/testing/index.html" class="md-nav__link">
         Index
       </a>
     </li>
@@ -903,8 +870,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -913,45 +878,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#classes" class="md-nav__link">
-    Classes
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
-    <nav class="md-nav" aria-label="Classes">
+    <nav class="md-nav" aria-label="Usage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#invalidactionerror" class="md-nav__link">
-    InvalidActionError
+  <a href="#cli" class="md-nav__link">
+    CLI
   </a>
   
-    <nav class="md-nav" aria-label="InvalidActionError">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-files" class="md-nav__link">
+    Config files
+  </a>
+  
+    <nav class="md-nav" aria-label="Config files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ancestors-in-mro" class="md-nav__link">
-    Ancestors (in MRO)
+  <a href="#global-config" class="md-nav__link">
+    Global config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#class-variables" class="md-nav__link">
-    Class variables
+  <a href="#project-config" class="md-nav__link">
+    Project config
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with_traceback" class="md-nav__link">
-    with_traceback
+  <a href="#precedence" class="md-nav__link">
+    Precedence
   </a>
   
 </li>
@@ -962,50 +934,16 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#taskcatexception" class="md-nav__link">
-    TaskCatException
-  </a>
-  
-    <nav class="md-nav" aria-label="TaskCatException">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ancestors-in-mro_1" class="md-nav__link">
-    Ancestors (in MRO)
+  <a href="#cli-interface" class="md-nav__link">
+    CLI interface
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#descendants" class="md-nav__link">
-    Descendants
+  <a href="#configuration-files" class="md-nav__link">
+    Configuration files
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-variables_1" class="md-nav__link">
-    Class variables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methods_1" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with_traceback_1" class="md-nav__link">
-    with_traceback
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1026,124 +964,125 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/andrew-glenn/taskcat/edit/main/reference/taskcat/exceptions.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/andrew-glenn/taskcat/edit/main/docs/usage/GENERAL_USAGE.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="module-taskcatexceptions">Module taskcat.exceptions</h1>
-<p>None</p>
-<p>None</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">TaskCatException</span>(<span class="nb">Exception</span>):
-
-    <span class="s">&quot;&quot;&quot;Raised when taskcat experiences a fatal error&quot;&quot;&quot;</span>
-
-<span class="k">class</span> <span class="n">InvalidActionError</span>(<span class="n">TaskCatException</span>):
-
-    <span class="s">&quot;&quot;&quot;Exception raised for error when invalid action is supplied</span>
-
-<span class="s">    Attributes:</span>
-
-<span class="s">        expression -- input expression in which the error occurred</span>
-
-<span class="s">    &quot;&quot;&quot;</span>
-
-    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>, <span class="n">expression</span>):
-
-        <span class="nb">self</span>.<span class="n">expression</span> = <span class="n">expression</span>
-
-        <span class="n">super</span>().<span class="n">__init__</span>()
+                  <h1>General Usage</h1>
+                
+                <h2 id="usage">Usage</h2>
+<h3 id="cli">CLI</h3>
+<p>The cli is self documenting by using <code>--help</code>. The most common use of taskcat is for
+executing function tests of CloudFormation templates. The command for this is:</p>
+<div class="codehilite"><pre><span></span><code>taskcat <span class="nb">test</span> run
 </code></pre></div>
 
-</details>
-<h2 id="classes">Classes</h2>
-<h3 id="invalidactionerror">InvalidActionError</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">InvalidActionError</span><span class="p">(</span>
-    <span class="n">expression</span>
-<span class="p">)</span>
+<p>add <code>--help to see the supported flags and arguments</code></p>
+<h3 id="python">Python</h3>
+<p>Taskcat can be imported into Python and used in the testing framework of your choice.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">taskcat.testing</span> <span class="kn">import</span> <span class="n">CFNTest</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">CFNTest</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">project_root</span><span class="o">=</span><span class="s1">&#39;./template_dir&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">test</span> <span class="k">as</span> <span class="n">stacks</span><span class="p">:</span>
+    <span class="c1"># Calling &#39;with&#39; or &#39;test.run()&#39; will deploy the stacks.</span>
+    <span class="k">for</span> <span class="n">stack</span> <span class="ow">in</span> <span class="n">stacks</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Testing </span><span class="si">{</span><span class="n">stack</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">bucket_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">output</span> <span class="ow">in</span> <span class="n">stack</span><span class="o">.</span><span class="n">outputs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">output</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;LogsBucketName&quot;</span><span class="p">:</span>
+                <span class="n">bucket_name</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">value</span>
+                <span class="k">break</span>
+        <span class="k">assert</span> <span class="s2">&quot;logs&quot;</span> <span class="ow">in</span> <span class="n">bucket_name</span>
+        <span class="k">assert</span> <span class="n">stack</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">bucket_name</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created bucket: </span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p>Exception raised for error when invalid action is supplied</p>
-<p>Attributes:
-    expression -- input expression in which the error occurred</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">InvalidActionError</span>(<span class="n">TaskCatException</span>):
-
-    <span class="s">&quot;&quot;&quot;Exception raised for error when invalid action is supplied</span>
-
-<span class="s">    Attributes:</span>
-
-<span class="s">        expression -- input expression in which the error occurred</span>
-
-<span class="s">    &quot;&quot;&quot;</span>
-
-    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>, <span class="n">expression</span>):
-
-        <span class="nb">self</span>.<span class="n">expression</span> = <span class="n">expression</span>
-
-        <span class="n">super</span>().<span class="n">__init__</span>()
+<p>The example used here is very simple, you would most likely leverage other python modules like boto3 to do more advanced testing. The <code>CFNTest</code> object can be passed the same arguments as <code>taskcat test run</code>. See the <a href="https://aws-quickstart.github.io/taskcat/apidocs/taskcat/testing/index.html">docs</a> for more details.</p>
+<h3 id="config-files">Config files</h3>
+<p>taskcat has several configuration files which can be used to set behaviors in a flexible way.</p>
+<h4 id="global-config">Global config</h4>
+<p><code>~/.taskcat.yml</code> provides global settings that become defaults for all projects. Please see our <a href="docs/schema/taskcat_schema.html">schema reference</a> for specific configuration options that are available.</p>
+<h4 id="project-config">Project config</h4>
+<p><code>&lt;PROJECT_ROOT&gt;/.taskcat.yml</code> provides project specific configuration. Please see our <a href="docs/schema/taskcat_schema.html">schema reference</a> for specific configuration options that are available.</p>
+<h4 id="precedence">Precedence</h4>
+<p>With the exception of the <code>parameters</code> section, more specific config with the same key
+takes precedence.</p>
+<blockquote>
+<p>The rationale behind having parameters function this way is so that values can be
+overridden at a system level outside of a project, that is likely committed to source
+control. parameters that define account specific things like VPC details, Key Pairs, or
+secrets like API keys can be defined per host outside of source control.</p>
+</blockquote>
+<p>For example, consider this global config:</p>
+<p><code>~/.taskcat.yml</code></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">general</span><span class="p">:</span>
+  <span class="nt">s3_bucket</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-globally-defined-bucket</span>
+  <span class="nt">parameters</span><span class="p">:</span>
+    <span class="nt">KeyPair</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-global-ec2-keypair</span>
 </code></pre></div>
 
-</details>
-<hr />
-<h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
-<ul>
-<li>taskcat.exceptions.TaskCatException</li>
-<li>builtins.Exception</li>
-<li>builtins.BaseException</li>
-</ul>
-<h4 id="class-variables">Class variables</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">args</span>
+<p>Given a simple project config:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">project</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-project</span>
+  <span class="nt">regions</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">us-east-2</span>
+<span class="nt">tests</span><span class="p">:</span>
+  <span class="nt">default</span><span class="p">:</span>
+    <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./template.yaml</span>
 </code></pre></div>
 
-<h4 id="methods">Methods</h4>
-<h4 id="with_traceback">with_traceback</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">with_traceback</span><span class="p">(</span>
-    <span class="o">...</span>
-<span class="p">)</span>
+<p>The effective test configuration would become:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">tests</span><span class="p">:</span>
+  <span class="nt">default</span><span class="p">:</span>
+    <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./template.yaml</span>
+    <span class="nt">s3_bucket</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-globally-defined-bucket</span>
+    <span class="nt">parameters</span><span class="p">:</span>
+      <span class="nt">KeyPair</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-global-ec2-keypair</span>
 </code></pre></div>
 
-<p>Exception.with_traceback(tb) --</p>
-<p>set self.<strong>traceback</strong> to tb and return self.</p>
-<h3 id="taskcatexception">TaskCatException</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">TaskCatException</span><span class="p">(</span>
-    <span class="o">/</span><span class="p">,</span>
-    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
-    <span class="o">**</span><span class="n">kwargs</span>
-<span class="p">)</span>
+<p>If any item is re-defined in a project it takes precedence over the global value.
+Anything defined in a test takes precedence over what is defined in the project or
+global configuration. with the <strong>exception</strong> of the <code>parameters</code> section which works in
+reverse. For example, using the same global config as above, given this project config:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">project</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-project</span>
+  <span class="nt">regions</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">us-east-2</span>
+  <span class="nt">s3_bucket</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-project-s3-bucket</span>
+<span class="nt">tests</span><span class="p">:</span>
+  <span class="nt">default</span><span class="p">:</span>
+    <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./template.yaml</span>
+    <span class="nt">parameters</span><span class="p">:</span>
+      <span class="nt">KeyPair</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-test-ec2-keypair</span>
 </code></pre></div>
 
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">TaskCatException</span>(<span class="nb">Exception</span>):
-
-    <span class="s">&quot;&quot;&quot;Raised when taskcat experiences a fatal error&quot;&quot;&quot;</span>
+<p>Would result in this effective test configuration:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">tests</span><span class="p">:</span>
+  <span class="nt">default</span><span class="p">:</span>
+    <span class="nt">template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./template.yaml</span>
+    <span class="nt">s3_bucket</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-project-s3-bucket</span>
+    <span class="nt">parameters</span><span class="p">:</span>
+      <span class="nt">KeyPair</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-global-ec2-keypair</span>
 </code></pre></div>
 
-</details>
-<hr />
-<h4 id="ancestors-in-mro_1">Ancestors (in MRO)</h4>
-<ul>
-<li>builtins.Exception</li>
-<li>builtins.BaseException</li>
-</ul>
-<h4 id="descendants">Descendants</h4>
-<ul>
-<li>taskcat.exceptions.InvalidActionError</li>
-<li>taskcat._s3_stage.S3BucketCreatorException</li>
-<li>taskcat._amiupdater.AMIUpdaterFatalException</li>
-<li>taskcat._amiupdater.AMIUpdaterCommitNeededException</li>
-</ul>
-<h4 id="class-variables_1">Class variables</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">args</span>
+<p>Notice that <code>s3_bucket</code> took the most specific value and <code>KeyPair</code> the most general.</p>
+<h3 id="cli-interface">CLI interface</h3>
+<p>taskcat adopts a similar cli command structure to <code>git</code> with a
+<code>taskcat command subcommand --flag</code> style. The cli is also designed to be simplest if
+run from the root of a project. Let's have a look at equivalent command to run a test:</p>
+<p>cd into the project root and type <strong>test</strong> <strong>run</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ./quickstart-aws-vpc
+taskcat <span class="nb">test</span> run
 </code></pre></div>
 
-<h4 id="methods_1">Methods</h4>
-<h4 id="with_traceback_1">with_traceback</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">with_traceback</span><span class="p">(</span>
-    <span class="o">...</span>
-<span class="p">)</span>
+<p>or run it from anywhere by providing the path to the project root</p>
+<div class="codehilite"><pre><span></span><code>taskcat <span class="nb">test</span> run -p ./quickstart-aws-vpc
 </code></pre></div>
 
-<p>Exception.with_traceback(tb) --</p>
-<p>set self.<strong>traceback</strong> to tb and return self.</p>
+<h3 id="configuration-files">Configuration files</h3>
+<p>The configuration files required for taskcat have changed, to ease migration, if taskcat
+is run and legacy config files are found, they are converted and written to new file
+locations. For more information on the new format, see the <a href="#config-files">config file docs</a>.</p>
                 
               
               
@@ -1163,7 +1102,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../taskcat_plugin_testhook.html" title="Taskcat Plugin Testhook" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../INSTALLATION.html" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1172,19 +1111,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Taskcat Plugin Testhook
+                Installation
               </span>
             </div>
           </a>
         
         
-          <a href="index.html" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="PARAMETER_OVERRIDES.html" title="Parameter Overrides" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Index
+                Parameter Overrides
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

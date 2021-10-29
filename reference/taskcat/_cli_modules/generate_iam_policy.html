@@ -14,7 +14,7 @@
     
     
       
-        <title>Index - taskcat</title>
+        <title>Generate Iam Policy - taskcat</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-taskcat_cli_modules" class="md-skip">
+        <a href="#module-taskcat_cli_modulesgenerate_iam_policy" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Generate Iam Policy
             
           </span>
         </div>
@@ -592,18 +592,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="generate_iam_policy.html" class="md-nav__link">
-        Generate Iam Policy
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -616,12 +604,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Index
+          Generate Iam Policy
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="index.html" class="md-nav__link md-nav__link--active">
-        Index
+      <a href="generate_iam_policy.html" class="md-nav__link md-nav__link--active">
+        Generate Iam Policy
       </a>
       
         
@@ -639,9 +627,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sub-modules" class="md-nav__link">
-    Sub-modules
+  <a href="#variables" class="md-nav__link">
+    Variables
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generateiampolicy" class="md-nav__link">
+    GenerateIAMPolicy
+  </a>
+  
+    <nav class="md-nav" aria-label="GenerateIAMPolicy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -649,6 +670,18 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Index
+      </a>
     </li>
   
 
@@ -820,9 +853,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sub-modules" class="md-nav__link">
-    Sub-modules
+  <a href="#variables" class="md-nav__link">
+    Variables
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generateiampolicy" class="md-nav__link">
+    GenerateIAMPolicy
+  </a>
+  
+    <nav class="md-nav" aria-label="GenerateIAMPolicy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -838,46 +904,88 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/andrew-glenn/taskcat/edit/main/reference/taskcat/_cli_modules/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/andrew-glenn/taskcat/edit/main/reference/taskcat/_cli_modules/generate_iam_policy.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="module-taskcat_cli_modules">Module taskcat._cli_modules</h1>
+                <h1 id="module-taskcat_cli_modulesgenerate_iam_policy">Module taskcat._cli_modules.generate_iam_policy</h1>
 <p>None</p>
 <p>None</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">.delete</span> <span class="kn">import</span> <span class="n">Delete</span>  <span class="c1"># noqa: F401</span>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
 
-<span class="kn">from</span> <span class="nn">.deploy</span> <span class="kn">import</span> <span class="n">Deploy</span>  <span class="c1"># noqa: F401</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
-<span class="kn">from</span> <span class="nn">.lint</span> <span class="kn">import</span> <span class="n">Lint</span>  <span class="c1"># noqa: F401</span>
+<span class="kn">from</span> <span class="nn">taskcat._config</span> <span class="kn">import</span> <span class="n">Config</span>
 
-<span class="kn">from</span> <span class="nn">.list</span> <span class="kn">import</span> <span class="n">List</span>  <span class="c1"># noqa: F401</span>
+<span class="kn">from</span> <span class="nn">taskcat.iam_policy.policy</span> <span class="kn">import</span> <span class="n">CFNPolicyGenerator</span>
 
-<span class="kn">from</span> <span class="nn">.package</span> <span class="kn">import</span> <span class="n">Package</span>  <span class="c1"># noqa: F401</span>
+<span class="n">LOG</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">.test</span> <span class="kn">import</span> <span class="n">Test</span>  <span class="c1"># noqa: F401</span>
+<span class="k">class</span> <span class="nc">GenerateIAMPolicy</span><span class="p">:</span>
 
-<span class="kn">from</span> <span class="nn">.update_ami</span> <span class="kn">import</span> <span class="n">UpdateAMI</span>  <span class="c1"># noqa: F401</span>
+    <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">.upload</span> <span class="kn">import</span> <span class="n">Upload</span>  <span class="c1"># noqa: F401</span>
+<span class="sd">    [ALPHA] Introspects CFN Template(s) and generates an IAM policy necessary to successfully launch the template(s)</span>
 
-<span class="kn">from</span> <span class="nn">.generate_iam_policy</span> <span class="kn">import</span> <span class="n">GenerateIAMPolicy</span> <span class="c1"># noqa: F401</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">CLINAME</span> <span class="o">=</span> <span class="s2">&quot;generate-iam-policy&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./cfn_stack_policy.json&#39;</span> <span class="p">,</span> <span class="n">project_root</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span><span class="p">):</span>
+
+        <span class="n">project_root_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">project_root</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+
+        <span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+
+            <span class="n">project_root</span><span class="o">=</span><span class="n">project_root_path</span>
+
+        <span class="p">)</span>
+
+        <span class="n">CFNPolicyGenerator</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span><span class="o">.</span><span class="n">generate_policy</span><span class="p">()</span>
 </code></pre></div>
 
 </details>
-<h2 id="sub-modules">Sub-modules</h2>
-<ul>
-<li><a href="delete/">taskcat._cli_modules.delete</a></li>
-<li><a href="deploy/">taskcat._cli_modules.deploy</a></li>
-<li><a href="generate_iam_policy/">taskcat._cli_modules.generate_iam_policy</a></li>
-<li><a href="lint/">taskcat._cli_modules.lint</a></li>
-<li><a href="list/">taskcat._cli_modules.list</a></li>
-<li><a href="package/">taskcat._cli_modules.package</a></li>
-<li><a href="test/">taskcat._cli_modules.test</a></li>
-<li><a href="update_ami/">taskcat._cli_modules.update_ami</a></li>
-<li><a href="upload/">taskcat._cli_modules.upload</a></li>
-</ul>
+<h2 id="variables">Variables</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">LOG</span>
+</code></pre></div>
+
+<h2 id="classes">Classes</h2>
+<h3 id="generateiampolicy">GenerateIAMPolicy</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">GenerateIAMPolicy</span><span class="p">(</span>
+    <span class="n">output_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./cfn_stack_policy.json&#39;</span><span class="p">,</span>
+    <span class="n">project_root</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nl">GenerateIAMPolicy</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    [ALPHA] Introspects CFN Template(s) and generates an IAM policy necessary to successfully launch the template(s)</span>
+
+<span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">CLINAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;generate-iam-policy&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">output_file</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;./cfn_stack_policy.json&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nl">project_root</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;./&#39;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">project_root_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Path</span><span class="p">(</span><span class="n">project_root</span><span class="p">).</span><span class="n">expanduser</span><span class="p">().</span><span class="n">resolve</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Config</span><span class="p">.</span><span class="k">create</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">project_root</span><span class="o">=</span><span class="n">project_root_path</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">CFNPolicyGenerator</span><span class="p">(</span><span class="n">config</span><span class="p">,</span><span class="w"> </span><span class="n">output_file</span><span class="p">).</span><span class="n">generate_policy</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<hr />
+<h4 id="class-variables">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">CLINAME</span>
+</code></pre></div>
                 
               
               
@@ -897,7 +1005,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="generate_iam_policy.html" title="Generate Iam Policy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="deploy.html" title="Deploy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -906,19 +1014,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Generate Iam Policy
+                Deploy
               </span>
             </div>
           </a>
         
         
-          <a href="lint.html" title="Lint" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="index.html" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Lint
+                Index
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
