@@ -377,6 +377,16 @@ class Config:
             region = "us-gov-east-1"
         elif partition == "aws-cn":
             region = "cn-north-1"
+        elif partition == "aws-iso":
+            region = "us-iso-east-1"
+        elif partition == "aws-iso-b":
+            region = "us-isob-east-1"
+        elif partition == "aws-iso-e":
+            region = "eu-isoe-west-1"
+        elif partition == "aws-iso-f":
+            region = "us-isof-east-1"
+        elif partition == "aws-eusc":
+            region = "eusc-de-east-1"
         return region
 
     def get_rendered_parameters(self, bucket_objects, region_objects, template_objects):

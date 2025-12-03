@@ -11,4 +11,4 @@ class InvalidActionError(TaskCatException):
 
     def __init__(self, expression):
         self.expression = expression
-        super().__init__()
+        super().__init__(expression)

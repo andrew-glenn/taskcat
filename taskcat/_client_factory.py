@@ -173,6 +173,11 @@ class Boto3Cache:
             ("aws", "us-east-1"),
             ("aws-cn", "cn-north-1"),
             ("aws-us-gov", "us-gov-west-1"),
+            ("aws-iso", "us-iso-east-1"),
+            ("aws-iso-b", "us-isob-east-1"),
+            ("aws-iso-e", "eu-isoe-west-1"),
+            ("aws-iso-f", "us-isof-east-1"),
+            ("aws-eusc", "eusc-de-east-1"),
         ]
         for partition, region in partition_regions:
             try:

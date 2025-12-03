@@ -3,6 +3,7 @@ version = "0.9.57"
 authors = ["Andrew Glenn", "Jay McConnell", "Shivansh Singh", "Tony Vattathil"]
 description = "An OpenSource Cloudformation Deployment Framework"
 name = "taskcat"
+packages = [{include = "taskcat"}]
 
 [tool.poetry.dependencies]
 pathspec = '0.10.3'
@@ -73,3 +74,7 @@ Installation = "docs/INSTALLATION.md"
 #
 # [[tool.portray.mkdocs.nav]]
 # Usage = "docs/usage/"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
