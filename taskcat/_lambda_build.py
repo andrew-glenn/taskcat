@@ -176,7 +176,7 @@ class LambdaBuild:
 
     @staticmethod
     def _docker_build(path, tag):
-        cli = APIClient()
+        cli = APIClient(os.environ.get('DOCKER_HOST', 'unix://var/run/docker.sock'))
         build_logs = []
         for line in cli.build(path=str(path), tag=tag):
             build_logs.append(line)
