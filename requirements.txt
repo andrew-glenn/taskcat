@@ -1,5 +1,6 @@
 pathspec==0.10.3
 reprint
+ruamel.yaml
 tabulate>=0.8.2,<1.0
 cfn_lint>=0.78.1,<2.0
 setuptools>=40.4.3

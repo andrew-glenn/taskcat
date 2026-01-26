@@ -10,7 +10,7 @@ git clone https://github.com/awslabs/git-secrets.git
 cd git-secrets
 make install
 cd ${PROJECT_PATH}
-pip install -r dev-requirements.txt  -r requirements.txt
+pip install -r dev-requirements.txt -r requirements.txt
 pre-commit run --all-files
 if [ $? -ne 0 ]; then
   git status

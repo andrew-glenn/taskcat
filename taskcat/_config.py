@@ -200,7 +200,7 @@ class Config:
     # pylint: disable=protected-access
     @staticmethod
     def _dict_from_env_vars(
-        env_vars: Optional[Union[os._Environ, Dict[str, str]]] = None
+        env_vars: Optional[Union[os._Environ, Dict[str, str]]] = None,
     ):
         if env_vars is None:
             env_vars = os.environ

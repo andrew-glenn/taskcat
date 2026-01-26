@@ -1,6 +1,6 @@
 import logging
-import random
 import re
+import secrets
 import uuid
 from typing import Set
 
@@ -273,29 +273,28 @@ class ParamGen:
         # Generates password string with:
         # lowercase,uppercase and numeric chars
         if pass_type == "A":  # nosec
-
             while len(password) < pass_length:
-                password.append(random.choice(lowercase))
-                password.append(random.choice(uppercase))
-                password.append(random.choice(numbers))
+                password.append(secrets.choice(lowercase))
+                password.append(secrets.choice(uppercase))
+                password.append(secrets.choice(numbers))
 
         # Generates password string with:
         # lowercase,uppercase, numbers and special chars
-        elif pass_type == "S":
+        elif pass_type == "S":  # nosec
             while len(password) < pass_length:
-                password.append(random.choice(lowercase))
-                password.append(random.choice(uppercase))
-                password.append(random.choice(numbers))
-                password.append(random.choice(specialchars))
+                password.append(secrets.choice(lowercase))
+                password.append(secrets.choice(uppercase))
+                password.append(secrets.choice(numbers))
+                password.append(secrets.choice(specialchars))
         else:
             # If no passtype is defined (None)
             # Defaults to alpha-numeric
             # Generates password string with:
             # lowercase,uppercase, numbers and special chars
             while len(password) < pass_length:
-                password.append(random.choice(lowercase))
-                password.append(random.choice(uppercase))
-                password.append(random.choice(numbers))
+                password.append(secrets.choice(lowercase))
+                password.append(secrets.choice(uppercase))
+                password.append(secrets.choice(numbers))
 
         if len(password) > pass_length:
             password = password[:pass_length]
@@ -315,7 +314,7 @@ class ParamGen:
         random_string_list = []
         lowercase = "abcdefghijklmnopqrstuvwxyz"
         while len(random_string_list) < length:
-            random_string_list.append(random.choice(lowercase))  # nosec
+            random_string_list.append(secrets.choice(lowercase))  # nosec
         return "".join(random_string_list)
 
     @staticmethod
@@ -323,7 +322,7 @@ class ParamGen:
         random_number_list = []
         numbers = "1234567890"
         while len(random_number_list) < length:
-            random_number_list.append(random.choice(numbers))  # nosec
+            random_number_list.append(secrets.choice(numbers))  # nosec
         return "".join(random_number_list)
 
     @staticmethod
@@ -389,7 +388,6 @@ class ParamGen:
         if genaz_regex.search(self.param_value):
             numazs = int(self.regxfind(count_regex, self.param_value))
             if numazs:
-
                 self._regex_replace_param_value(
                     genaz_regex, self.get_available_azs(numazs)
                 )
