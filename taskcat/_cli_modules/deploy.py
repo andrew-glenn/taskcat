@@ -64,7 +64,7 @@ class Deploy:
             LOG.info(f"fetching git repo {url}")
             self._git_clone(url, path)
             self._recurse_submodules(path, url)
-        _extra_tags = [(Tag({"Key": "taskcat-installer", "Value": name}))]
+        _extra_tags = [Tag({"Key": "taskcat-installer", "Value": name})]
         Test.run(
             regions=regions,
             no_delete=True,

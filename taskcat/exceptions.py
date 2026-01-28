@@ -9,6 +9,6 @@ class InvalidActionError(TaskCatException):
         expression -- input expression in which the error occurred
     """
 
-    def __init__(self, expression):
+    def __init__(self, expression):  # noqa: B042
         self.expression = expression
-        super().__init__()
+        super().__init__(expression)

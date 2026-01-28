@@ -22,6 +22,11 @@ S3_PARTITION_MAP = {
     "aws": "amazonaws.com",
     "aws-cn": "amazonaws.com.cn",
     "aws-us-gov": "amazonaws.com",
+    "aws-iso": "c2s.ic.gov",
+    "aws-iso-b": "sc2s.sgov.gov",
+    "aws-iso-e": "cloud.adc-e.uk",
+    "aws-iso-f": "csp.hci.ic.gov",
+    "aws-eusc": "amazonaws.eu",
 }
 
 FIRST_CAP_RE = re.compile("(.)([A-Z][a-z]+)")
